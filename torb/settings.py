@@ -51,11 +51,11 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'torb.urls'
-from os import path
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [path.join(BASE_DIR, 'templates')],
+        'DIRS': [BASE_DIR, 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

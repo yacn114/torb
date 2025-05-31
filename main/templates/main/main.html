@@ -1,9 +1,281 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>main</title>
+    <title>ترب | مقایسه قیمت محصولات در فروشگاه‌های معتبر</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
   </head>
-  <body></body>
+  <body>
+    <!-- نوار بالایی -->
+    <div class="top-bar">
+      <div class="container">
+        <div class="top-links">
+          <a href="#">فروشنده شوید</a>
+          <a href="#">پرسش‌های متداول</a>
+          <a href="#">تماس با ما</a>
+        </div>
+        <div class="top-links">
+          <a href="#"><i class="fas fa-user"></i> ورود / ثبت‌نام</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- هدر اصلی -->
+    <header>
+      <div class="header-content">
+        <div class="logo">ترب</div>
+        <div class="search-bar">
+          <input type="text" placeholder="جستجوی محصولات مورد نظرتان..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+          <a href="#"><i class="far fa-heart"></i></a>
+          <a href="#"><i class="fas fa-shopping-cart"></i></a>
+          <a href="#"><i class="far fa-user"></i></a>
+        </div>
+      </div>
+    </header>
+
+    <!-- منوی اصلی با زیرمنو -->
+    <nav>
+      <div class="nav-container">
+        <ul class="nav-categories">
+          <li>
+            <i class="fas fa-bars"></i> دسته‌بندی محصولات
+            <!-- مگامنو -->
+            <div class="mega-menu">
+              <div class="mega-menu-container">
+                <!-- ستون ۱ -->
+                <div class="mega-menu-col">
+                  <h4>
+                    لوازم الکترونیکی <i class="fas fa-laptop cat-icon"></i>
+                  </h4>
+                  <ul>
+                    <li><a href="#">موبایل و تبلت</a></li>
+                    <li><a href="#">لپ‌تاپ و کامپیوتر</a></li>
+                    <li><a href="#">هدفون و هندزفری</a></li>
+                    <li><a href="#">ساعت هوشمند</a></li>
+                    <li><a href="#">دوربین</a></li>
+                  </ul>
+                </div>
+                <!-- ستون ۲ -->
+                <div class="mega-menu-col">
+                  <h4>لوازم خانگی <i class="fas fa-home cat-icon"></i></h4>
+                  <ul>
+                    <li><a href="#">یخچال و فریزر</a></li>
+                    <li><a href="#">ماشین لباسشویی</a></li>
+                    <li><a href="#">جاروبرقی</a></li>
+                    <li><a href="#">تهویه مطبوع</a></li>
+                    <li><a href="#">لوازم آشپزخانه</a></li>
+                  </ul>
+                </div>
+                <!-- ستون ۳ -->
+                <div class="mega-menu-col">
+                  <h4>مد و پوشاک <i class="fas fa-tshirt cat-icon"></i></h4>
+                  <ul>
+                    <li><a href="#">لباس مردانه</a></li>
+                    <li><a href="#">لباس زنانه</a></li>
+                    <li><a href="#">کفش</a></li>
+                    <li><a href="#">اکسسوری</a></li>
+                    <li><a href="#">ساعت</a></li>
+                  </ul>
+                </div>
+                <!-- ستون ۴ -->
+                <div class="mega-menu-col">
+                  <h4>
+                    کالای دیجیتال <i class="fas fa-mobile-alt cat-icon"></i>
+                  </h4>
+                  <ul>
+                    <li><a href="#">گوشی موبایل</a></li>
+                    <li><a href="#">تبلت</a></li>
+                    <li><a href="#">لپ‌تاپ</a></li>
+                    <li><a href="#">کنسول بازی</a></li>
+                    <li><a href="#">مودم و شبکه</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>موبایل</li>
+          <li>لپ‌تاپ</li>
+          <li>لوازم خانگی</li>
+          <li>تبلت</li>
+          <li>هدفون</li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- اسلایدر -->
+    <div class="slider">
+      <img src="https://via.placeholder.com/1200x300" alt="اسلایدر تخفیف‌ها" />
+    </div>
+
+    <!-- دسته‌بندی‌ها -->
+    <div class="categories">
+      <h3 class="categories-title">دسته‌بندی‌های پربازدید</h3>
+      <div class="category-list">
+        <div class="category-item">
+          <img src="https://via.placeholder.com/50" alt="موبایل" />
+          <p>موبایل</p>
+        </div>
+        <div class="category-item">
+          <img src="https://via.placeholder.com/50" alt="لپ‌تاپ" />
+          <p>لپ‌تاپ</p>
+        </div>
+        <div class="category-item">
+          <img src="https://via.placeholder.com/50" alt="هدفون" />
+          <p>هدفون</p>
+        </div>
+        <div class="category-item">
+          <img src="https://via.placeholder.com/50" alt="لوازم خانگی" />
+          <p>لوازم خانگی</p>
+        </div>
+        <div class="category-item">
+          <img src="https://via.placeholder.com/50" alt="تبلت" />
+          <p>تبلت</p>
+        </div>
+        <div class="category-item">
+          <img src="https://via.placeholder.com/50" alt="ساعت هوشمند" />
+          <p>ساعت هوشمند</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- محصولات پربازدید -->
+    <div class="popular-products">
+      <h3 class="section-title">
+        <i class="fas fa-fire"></i> پربازدیدترین محصولات
+      </h3>
+      <div class="products-grid">
+        <!-- محصول ۱ -->
+        <div class="product-card">
+          <img
+            src="https://via.placeholder.com/250"
+            alt="گوشی سامسونگ"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h4 class="product-title">
+              گوشی موبایل سامسونگ مدل Galaxy S23 Ultra دو سیم کارت
+            </h4>
+            <p class="product-price">۳۲,۹۰۰,۰۰۰ تومان</p>
+            <p class="product-store">از دیجی‌کالا</p>
+          </div>
+        </div>
+        <!-- محصول ۲ -->
+        <div class="product-card">
+          <img
+            src="https://via.placeholder.com/250"
+            alt="لپ‌تاپ اپل"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h4 class="product-title">لپ‌تاپ اپل مدل MacBook Pro M2 13 اینچ</h4>
+            <p class="product-price">۶۵,۰۰۰,۰۰۰ تومان</p>
+            <p class="product-store">از ایران دیجی</p>
+          </div>
+        </div>
+        <!-- محصول ۳ -->
+        <div class="product-card">
+          <img
+            src="https://via.placeholder.com/250"
+            alt="هدفون سونی"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h4 class="product-title">هدفون بی‌سیم سونی مدل WH-1000XM5</h4>
+            <p class="product-price">۱۲,۵۰۰,۰۰۰ تومان</p>
+            <p class="product-store">از هایپراستار</p>
+          </div>
+        </div>
+        <!-- محصول ۴ -->
+        <div class="product-card">
+          <img
+            src="https://via.placeholder.com/250"
+            alt="یخچال سامسونگ"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h4 class="product-title">یخچال فریزر سامسونگ مدل RS68A8821B1</h4>
+            <p class="product-price">۴۸,۰۰۰,۰۰۰ تومان</p>
+            <p class="product-store">از مکعب</p>
+          </div>
+        </div>
+        <!-- محصول ۵ -->
+        <div class="product-card">
+          <img
+            src="https://via.placeholder.com/250"
+            alt="تبلت سامسونگ"
+            class="product-image"
+          />
+          <div class="product-info">
+            <h4 class="product-title">تبلت سامسونگ مدل Galaxy Tab S9 Ultra</h4>
+            <p class="product-price">۳۶,۰۰۰,۰۰۰ تومان</p>
+            <p class="product-store">از دیجی‌کالا</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- فوتر -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>ترب</h3>
+          <ul>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#">فرصت‌های شغلی</a></li>
+            <li><a href="#">تماس با ما</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>خدمات مشتریان</h3>
+          <ul>
+            <li><a href="#">پرسش‌های متداول</a></li>
+            <li><a href="#">رویه بازگرداندن کالا</a></li>
+            <li><a href="#">شرایط استفاده</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>فروشندگان</h3>
+          <ul>
+            <li><a href="#">ثبت نام فروشندگان</a></li>
+            <li><a href="#">پنل فروشندگان</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>از آخرین تخفیف‌ها با خبر شوید</h3>
+          <form>
+            <input
+              type="email"
+              placeholder="ایمیل شما"
+              style="padding: 8px; width: 100%; margin-bottom: 10px"
+            />
+            <button
+              type="submit"
+              style="
+                padding: 8px 15px;
+                background-color: #ff5722;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+              "
+            >
+              عضویت
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>تمامی حقوق این سایت متعلق به ترب می‌باشد © ۱۴۰۲</p>
+      </div>
+    </footer>
+  </body>
 </html>
