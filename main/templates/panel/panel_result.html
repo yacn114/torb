@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>نتیجه پردازش</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Vazir, sans-serif;
+            background-color: #f9f9f9;
+            direction: rtl;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        th {
+            background-color: #eee;
+        }
+        img {
+            max-width: 150px;
+            height: auto;
+        }
+    </style>
+       <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        display: block;
+        align-items: center;
+        direction: rtl;
+        justify-content: center;
+        background-color: whitesmoke;
+      }
+      .search-form {
+        background: #fff;
+        padding: 2rem 2.5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        min-width: 300px;
+        width:3rem;
+      }
+      .search-form input[type="text"] {
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+      .search-form button {
+        padding: 0.7rem;
+        background: #1976d2;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .search-form button:hover {
+        background:rgb(49, 100, 158);
+      }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>عنوان</th>
+            <th>تصویر</th>
+            <th>قیمت</th>
+            <th>لینک</th>
+        </tr>
+        <tr>
+            <td>{{ title }}</td>
+            <td>
+                {% if image %}
+                    <img src="{{ image }}" alt="product image">
+                {% else %}
+                    تصویر یافت نشد
+                {% endif %}
+            </td>
+            <td>{{ price }}</td>
+            <td><a href="{{ url }}" target="_blank">مشاهده محصول</a></td>
+        </tr>
+    </table>
+        <form class="search-form" method="post">
+      {% csrf_token %}
+      <label for="url">جستجو:</label>
+      <input
+        type="text"
+        id="url"
+        name="url"
+        placeholder="آدرس را وارد کنید"
+        required
+      />
+      <button type="submit">جستجو</button>
+    </form>
+</body>
+</html>
